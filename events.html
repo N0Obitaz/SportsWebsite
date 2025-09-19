@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Association | Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <div id="nav-container"></div>
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Events</h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl">Discover upcoming sports events, tournaments, and activities.</p>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Upcoming Events</h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">Stay tuned for our latest competitions and gatherings.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                            <span class="text-white font-bold text-xl">15</span>
+                        </div>
+                        <div class="ml-4">
+                            <span class="text-sm text-gray-500">June 2023</span>
+                            <h3 class="text-lg font-medium text-gray-900">Annual Football Tournament</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Our biggest football event of the year with teams from across the region.</p>
+                    <div class="mt-6">
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">View Details <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                            <span class="text-white font-bold text-xl">22</span>
+                        </div>
+                        <div class="ml-4">
+                            <span class="text-sm text-gray-500">June 2023</span>
+                            <h3 class="text-lg font-medium text-gray-900">Youth Basketball Camp</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">5-day intensive basketball camp for young players aged 10-16.</p>
+                    <div class="mt-6">
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">View Details <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                            <span class="text-white font-bold text-xl">30</span>
+                        </div>
+                        <div class="ml-4">
+                            <span class="text-sm text-gray-500">June 2023</span>
+                            <h3 class="text-lg font-medium text-gray-900">Tennis Open Championship</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Annual tennis championship with categories for all skill levels.</p>
+                    <div class="mt-6">
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">View Details <i data-feather="arrow-right" class="ml-2 h-4 w-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        function loadSection(id, url, callback) {
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                    if (callback) callback();
+                    feather.replace();
+                });
+        }
+        loadSection('nav-container', 'nav.html');
+        loadSection('footer-container', 'footer.html');
+    </script>
+</body>
+</html>

@@ -22,56 +22,10 @@
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <i data-feather="award" class="text-blue-600 h-8 w-8"></i>
-                        <span class="ml-2 text-xl font-bold text-gray-900">Sports Association</span>
-                    </div>
-                </div>
-                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#" class="text-blue-600 font-medium px-3 py-2">Home</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Events</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Teams</a>
-                    <a href="./membership.html" class="text-gray-600 hover:text-blue-600 px-3 py-2">Membership</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Contact</a>
-                </div>
-                <div class="flex items-center md:hidden">
-                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    
 
-    <!-- Hero Section -->
-    <div class="hero-gradient text-white">
-        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-            <div class="text-center" data-aos="fade-up">
-                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                    United Through Sports
-                </h1>
-                <p class="mt-6 max-w-2xl mx-auto text-xl">
-                    Promoting excellence, teamwork and sportsmanship in our community.
-                </p>
-                <div class="mt-10 flex justify-center space-x-4">
-                    <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-100">
-                        Join Us
-                    </a>
-                    <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 bg-opacity-60 hover:bg-opacity-70">
-                        Learn More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Featured Sports -->
-    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div id="nav-container"></div>
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 mt-12 flex flex-col items-center">
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 Our Featured Sports
@@ -80,7 +34,9 @@
                 We support a wide range of sports activities for all ages and skill levels.
             </p>
         </div>
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="sports-cards"></div>
+        <div class="w-full flex justify-center">
+            <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="sports-cards"></div>
+        </div>
     </div>
 
     <!-- Upcoming Events -->
@@ -258,71 +214,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-medium mb-4">About Us</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Our Mission</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">History</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Leadership</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Sports</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Football</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Basketball</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Tennis</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">More Sports</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Schedules</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Facilities</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Coaching</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Connect</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Newsletter</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Social Media</a></li>
-                    </ul>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-feather="facebook" class="h-6 w-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-feather="twitter" class="h-6 w-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-feather="instagram" class="h-6 w-6"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i data-feather="youtube" class="h-6 w-6"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
-                <p class="text-gray-400 text-sm">
-                    &copy; 2023 Sports Association. All rights reserved.
-                </p>
-                <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <script>
         AOS.init({
@@ -361,7 +253,6 @@
                 desc: "This is rollball",
                 delay: 300
             }
-
         ];
 
         const sportsCards = document.getElementById('sports-cards');
@@ -384,6 +275,19 @@
             `).join('');
             feather.replace(); // Re-render icons after DOM update
         }
+
+        // Load nav and footer dynamically
+        function loadSection(id, url, callback) {
+            fetch(url)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                    if (callback) callback();
+                    feather.replace();
+                });
+        }
+        loadSection('nav-container', 'nav.html');
+        loadSection('footer-container', 'footer.html');
     </script>
 </body>
 </html>
