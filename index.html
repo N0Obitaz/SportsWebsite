@@ -36,7 +36,7 @@
                     <a href="#" class="text-blue-600 font-medium px-3 py-2">Home</a>
                     <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Events</a>
                     <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Teams</a>
-                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Membership</a>
+                    <a href="./membership.html" class="text-gray-600 hover:text-blue-600 px-3 py-2">Membership</a>
                     <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Contact</a>
                 </div>
                 <div class="flex items-center md:hidden">
@@ -80,56 +80,7 @@
                 We support a wide range of sports activities for all ages and skill levels.
             </p>
         </div>
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
-                <img src="http://static.photos/sport/640x360/1" alt="Football" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
-                            <i data-feather="target" class="text-white h-6 w-6"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-medium text-gray-900">Football</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4 text-gray-600">
-                        Join our competitive and recreational football leagues for all age groups.
-                    </p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
-                <img src="http://static.photos/sport/640x360/2" alt="Basketball" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
-                            <i data-feather="activity" class="text-white h-6 w-6"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-medium text-gray-900">Basketball</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4 text-gray-600">
-                        Year-round basketball programs for youth and adults with professional coaching.
-                    </p>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
-                <img src="http://static.photos/sport/640x360/3" alt="Tennis" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex items-center">
-                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
-                            <i data-feather="star" class="text-white h-6 w-6"></i>
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-lg font-medium text-gray-900">Tennis</h3>
-                        </div>
-                    </div>
-                    <p class="mt-4 text-gray-600">
-                        Tennis lessons and tournaments for players of all skill levels.
-                    </p>
-                </div>
-            </div>
-        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3" id="sports-cards"></div>
     </div>
 
     <!-- Upcoming Events -->
@@ -379,7 +330,60 @@
             easing: 'ease-in-out',
             once: true
         });
+
+        // Dynamic Featured Sports rendering
+        const sportsData = [
+            {
+                name: "Football",
+                img: "http://static.photos/sport/640x360/1",
+                icon: "target",
+                desc: "Join our competitive and recreational football leagues for all age groups.",
+                delay: 100
+            },
+            {
+                name: "Basketball",
+                img: "http://static.photos/sport/640x360/2",
+                icon: "activity",
+                desc: "Year-round basketball programs for youth and adults with professional coaching.",
+                delay: 200
+            },
+            {
+                name: "Tennis",
+                img: "http://static.photos/sport/640x360/3",
+                icon: "star",
+                desc: "Tennis lessons and tournaments for players of all skill levels.",
+                delay: 300
+            },
+            {
+                name: "Roll Ball",
+                img: "http://static.photos/sport/640x360/3",
+                icon: "star",
+                desc: "This is rollball",
+                delay: 300
+            }
+
+        ];
+
+        const sportsCards = document.getElementById('sports-cards');
+        if (sportsCards) {
+            sportsCards.innerHTML = sportsData.map(sport => `
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="${sport.delay}">
+                    <img src="${sport.img}" alt="${sport.name}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
+                                <i data-feather="${sport.icon}" class="text-white h-6 w-6"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">${sport.name}</h3>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600">${sport.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+            feather.replace(); // Re-render icons after DOM update
+        }
     </script>
-    <script>feather.replace();</script>
 </body>
 </html>

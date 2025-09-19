@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Association | Membership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="award" class="text-blue-600 h-8 w-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Sports Association</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Events</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Teams</a>
+                    <a href="membership.html" class="text-blue-600 font-medium px-3 py-2">Membership</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2">Contact</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Membership Hero -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Membership
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl">
+                    Become a member and unlock exclusive benefits, events, and a vibrant sports community.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Membership Benefits -->
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Why Join?</h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                Our members enjoy a range of benefits designed to help you grow, connect, and compete.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
+                            <i data-feather="users" class="text-white h-6 w-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Community Access</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Connect with fellow athletes, coaches, and sports enthusiasts.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
+                            <i data-feather="calendar" class="text-white h-6 w-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Exclusive Events</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Priority access to tournaments, workshops, and social gatherings.</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-blue-500 rounded-md p-2">
+                            <i data-feather="award" class="text-white h-6 w-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Member Rewards</h3>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-600">Enjoy discounts, recognition, and special offers for members.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Membership Form -->
+    <div class="bg-gray-100">
+        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Sign Up Today</h2>
+                <p class="mt-4 text-gray-600">Fill out the form below to become a member.</p>
+            </div>
+            <form class="bg-white rounded-lg shadow-md p-8 space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label for="sport" class="block text-sm font-medium text-gray-700">Preferred Sport</label>
+                    <select id="sport" name="sport" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Select a sport</option>
+                        <option value="Football">Football</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Tennis">Tennis</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3 px-6 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition">Become a Member</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4">About Us</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">History</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Leadership</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Sports</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Football</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Basketball</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tennis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">More Sports</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Schedules</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Facilities</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Coaching</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Newsletter</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Social Media</a></li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="youtube" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400 text-sm">&copy; 2023 Sports Association. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
